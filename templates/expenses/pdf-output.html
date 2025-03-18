@@ -1,0 +1,108 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pdf Output</title>
+    <style>
+        @page  {
+            size: A4;
+            margin: 2.5cm 1.5cm 2.5cm 1.5cm;
+
+        @top-center {
+
+            content: "Uztex Group";
+        }
+     @bottom-right {
+    content: "Page " counter(page) " of  " counter(pages);
+}
+        }
+        img{
+            width: 250px;
+            height: 100px;
+        }
+    /* Umumiy jadval uslubi */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    /* Jadval sarlavhasi */
+    .thead {
+        background-color: #007bff;
+        color: white;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .thead th {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    /* Jadval qatorlari */
+    tbody tr {
+        border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tbody tr:hover {
+        background-color: #ddd;
+    }
+
+    tbody td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    /* Jami hisob */
+    tbody tr:last-child {
+        font-weight: bold;
+        background-color: #007bff;
+        color: white;
+        text-align: right;
+    }
+
+    /* Jadval chegaralari */
+    th, td {
+        border: 1px solid #ddd;
+    }
+</style>
+
+</head>
+<body>
+<img src="http://uztex.pro/static/media/LOGO%20UZTEX.f9d6d9d7.png" height="50px" width="100px" alt="Uztex Logo">
+<h2>Expenses List</h2>
+<table class="table">
+    <thead class="thead">
+    <th>No</th>
+    <th>{% translate 'Amount' %}</th>
+    <th>{% translate 'Categoty' %}</th>
+    <th>{% translate 'Description' %}</th>
+    <th>{% translate 'Date' %}</th>
+    </thead>
+    <tbody>
+    {% for expense in expenses %}
+        <tr>
+
+        <td>{{ forloop.counter }}</td>
+        <td>{{ expense.amount }}</td>
+        <td>{{ expense.category }}</td>
+        <td>{{ expense.description }}</td>
+        <td>{{ expense.date }}</td>
+        </tr>
+    {% endfor %}
+    <tr>
+        <td>{% translate 'Total' %}</td>
+        <td>{{ total_expenses }}</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

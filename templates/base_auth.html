@@ -150,34 +150,23 @@
   </div>
 </header>
 
-<div class="container-fluid">
-  <div class="row">
-
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <div class="card">
 
 
-    </div>
+    <main class="main">
 
-
-
-
-	<div class="col-md-3">
-
-</div>
-<div class="col-md-6">
 {% block content %}
 
 {% endblock %}
-</div>
-<div class="col-md-3">
 
-</div>
+
     </main>
   </div>
 </div>
-<script src="{% static 'js/bootstart.bundle.min.js' %}" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+{#<script src="{% static 'js/bootstart.bundle.min.js' %}" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>#}
 
     <script src="{% static 'js/main.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="{% static 'dashboard.js' %}"></script></body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous">
+
+{#    </script><script src="{% static 'dashboard.js' %}"></script></body>#}
+ </body>
 </html>

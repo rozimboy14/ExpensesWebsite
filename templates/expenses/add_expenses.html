@@ -1,7 +1,47 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% block content %}
+    <div class="container  mt-4 ">
 
-<h2>Add Expenses</h2>>
+        <nav aria-label="breadcrumb ">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'expenses' %}">{% translate 'Expenses' %}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{% translate 'Add Expenses' %}</li>
+            </ol>
+        </nav>
+        <div class="card">
+            <div class="card-body">
+                <form action="{% url 'add_expenses' %}" method="post">
+                    {% include 'partials/_message.html' %}
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="">{% translate 'Amount' %}</label>
+                        <input type="text" class="form-control form-control-sm" name="amount" value="{{ value.amount }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">{% translate 'Description' %}</label>
+                        <input type="text" class="form-control " name="description" value="{{ value.description }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">{% translate 'Category' %}</label>
+                        <select class="form-control form-control-sm" name="category">
+                            {% for category in categories %}
+                                <option name="{{ category.name }}">{{ category.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">{% translate 'Date of Expense' %}</label>
+                        <input type="date" class="form-control form-control-sm" name="expense_date">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">{% translate 'Save' %}</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
 
 {% endblock content %}
 

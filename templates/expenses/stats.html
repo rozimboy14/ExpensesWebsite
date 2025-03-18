@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    {% load static %}
+    {% include 'partials/_message.html' %}
+    <div class="container mt-4">
+
+        <div class="row">
+            <div class="col-md-10 bg-body-secondary ">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb text-center ">
+                        <li class="breadcrumb-item "><a href="">{% translate 'Expenses Summary' %}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{% translate 'Back' %}</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-md-2">
+                <a href="" class="btn btn-primary">{% translate 'Summary' %}</a>
+            </div>
+            <div>
+  <canvas id="myChart" style="width: 100px; height: 100px;" ></canvas>
+</div>
+
+
+        </div>
+
+
+        </div>
+    </div>
+    <script src="{% static 'js/searchExpenses.js' %}"></script>
+    <script src="{% static 'js/stats.js' %}"></script>
+{% endblock %}

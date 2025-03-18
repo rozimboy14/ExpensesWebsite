@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <div class="container  mt-4 ">
+
+  <div class="row">
+      <div class="col-md-10">
+                <nav aria-label="breadcrumb ">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'expenses' %}">{% translate 'Expenses' %}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{% translate 'Edit Expenses' %}</li>
+            </ol>
+        </nav>
+      </div>
+      <div class="col-md-2">
+          <a href="{% url 'expense_delete' expense.id %}" class="btn btn-danger">Delete</a>
+      </div>
+  </div>
+        <div class="card">
+            <div class="card-body">
+                <form action="{% url 'expense_edit' expense.id %}" method="post">
+                    {% include 'partials/_message.html' %}
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="">{% translate 'Amount' %}</label>
+                        <input type="text" class="form-control form-control-sm" name="amount" value="{{ values.amount }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">{% translate 'Description' %}</label>
+                        <input type="text" class="form-control " name="description" value="{{ values.description }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">{% translate 'Category' %}</label>
+                        <select class="form-control form-control-sm" name="category">
+                         <option name="category" selected value="{{ values.category }}">{{ values.category }}</option>
+                            {% for category in categories %}
+                                <option name="category" value="{{ category.name }}">{{ category.name }} </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">{% translate 'Date of Expense' %}</label>
+                        <input type="date" class="form-control form-control-sm" name="expense_date" value="{{ values.expense_date  }}" >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">Save</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock content %}
+

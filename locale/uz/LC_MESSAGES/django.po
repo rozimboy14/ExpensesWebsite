@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-17 15:07+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\expenseswebsite\settings.py:142
+msgid "Uzbek"
+msgstr "O'zbekcha"
+
+#: .\expenseswebsite\settings.py:143
+msgid "English"
+msgstr "Ingilizcha"
+
+#: .\expenseswebsite\settings.py:144
+msgid "Russian"
+msgstr "Ruscha"
+
+#: .\templates\authentication\login.html:13
+#: .\templates\authentication\register.html:13
+msgid "Register for a free account"
+msgstr "Ro'yxatdan o'tish"
+
+#: .\templates\authentication\login.html:33
+#: .\templates\authentication\register.html:43
+#: .\templates\authentication\reset-password.html:28
+#: .\templates\authentication\set-new-password.html:17
+msgid "Already have an account?"
+msgstr "Xisobingiz bormi?"
+
+#: .\templates\authentication\login.html:33
+#: .\templates\authentication\register.html:40
+#: .\templates\authentication\reset-password.html:29
+msgid "Register"
+msgstr "Ro'yxatdan o'tish"
+
+#: .\templates\authentication\login.html:34
+msgid "Forgot your password?"
+msgstr "Parolni unitdingizmi"
+
+#: .\templates\authentication\login.html:35
+msgid "Reset of password"
+msgstr "Parolni qayta tiklash"
+
+#: .\templates\authentication\register.html:44
+#: .\templates\authentication\reset-password.html:28
+#, fuzzy
+#| msgid "Signin"
+msgid "Sign in"
+msgstr "Tizimga kirish"
+
+#: .\templates\authentication\reset-password.html:13
+msgid "Enter your email to receive a password reset link."
+msgstr "Parolni qayta tiklash uchun emailingizni kiriting"
+
+#: .\templates\authentication\reset-password.html:29
+msgid "Create a new account"
+msgstr "Yangi xisob yaratish"
+
+#: .\templates\authentication\set-new-password.html:13
+msgid "Set New Password"
+msgstr "Yangi parol o'rnatish"
+
+#: .\templates\authentication\set-new-password.html:18
+msgid "Signin"
+msgstr "Tizimga kirish"
+
+#: .\templates\expenses\add_expenses.html:8
+#: .\templates\expenses\expense_edit.html:10 .\templates\expenses\index.html:13
+#: .\templates\partials\_sidebar.html:22
+msgid "Expenses"
+msgstr "Xarjatlar"
+
+#: .\templates\expenses\add_expenses.html:9
+msgid "Add Expenses"
+msgstr "Xarjat qo'shish"
+
+#: .\templates\expenses\add_expenses.html:18
+#: .\templates\expenses\expense_edit.html:25 .\templates\expenses\index.html:47
+#: .\templates\expenses\pdf-output.html:85
+#: .\templates\income\add_income.html:18 .\templates\income\income_edit.html:25
+#: .\templates\income\index.html:37 .\templates\income\index.html:72
+msgid "Amount"
+msgstr "Miqdor"
+
+#: .\templates\expenses\add_expenses.html:22
+#: .\templates\expenses\expense_edit.html:29 .\templates\expenses\index.html:52
+#: .\templates\expenses\index.html:88 .\templates\expenses\pdf-output.html:87
+#: .\templates\income\add_income.html:22 .\templates\income\income_edit.html:29
+#: .\templates\income\index.html:39 .\templates\income\index.html:74
+msgid "Description"
+msgstr "Tasnif"
+
+#: .\templates\expenses\add_expenses.html:26
+#: .\templates\expenses\expense_edit.html:33 .\templates\expenses\index.html:50
+#: .\templates\expenses\index.html:87
+msgid "Category"
+msgstr "Kategoriya"
+
+#: .\templates\expenses\add_expenses.html:34
+#: .\templates\expenses\expense_edit.html:42
+msgid "Date of Expense"
+msgstr "Xarajat sanasi"
+
+#: .\templates\expenses\add_expenses.html:38
+#: .\templates\income\income_edit.html:46
+msgid "Save"
+msgstr "Saqlash"
+
+#: .\templates\expenses\expense_edit.html:11
+msgid "Edit Expenses"
+msgstr "Xarajatni taxrirlash"
+
+#: .\templates\expenses\index.html:17
+msgid "My Expenses"
+msgstr "Mening xarajatlarim"
+
+#: .\templates\expenses\index.html:23
+msgid "+Add"
+msgstr "Qo'shish"
+
+#: .\templates\expenses\index.html:54 .\templates\expenses\index.html:89
+#: .\templates\expenses\pdf-output.html:88 .\templates\income\index.html:40
+#: .\templates\income\index.html:75
+msgid "Date"
+msgstr "Sana"
+
+#: .\templates\expenses\index.html:86
+msgid "Amount (CURRENCY)"
+msgstr "Miqdor"
+
+#: .\templates\expenses\pdf-output.html:86
+#, fuzzy
+#| msgid "Category"
+msgid "Categoty"
+msgstr "Kategoriya"
+
+#: .\templates\expenses\pdf-output.html:102
+msgid "Total"
+msgstr "Jami"
+
+#: .\templates\expenses\stats.html:12 .\templates\partials\_sidebar.html:43
+msgid "Expenses Summary"
+msgstr "Xarajatlar xisobotlari"
+
+#: .\templates\expenses\stats.html:13
+msgid "Back"
+msgstr "Orqaga"
+
+#: .\templates\expenses\stats.html:18 .\templates\partials\_sidebar.html:34
+msgid "Summary"
+msgstr "Xisobolar"
+
+#: .\templates\income\add_income.html:8 .\templates\income\income_edit.html:10
+#: .\templates\income\index.html:12 .\templates\partials\_sidebar.html:28
+msgid "Income"
+msgstr "Daromadlar"
+
+#: .\templates\income\add_income.html:9 .\templates\income\index.html:18
+msgid "Add Income"
+msgstr "Daromad qo'shish"
+
+#: .\templates\income\add_income.html:26 .\templates\income\income_edit.html:33
+msgid "Sources"
+msgstr "Kurs"
+
+#: .\templates\income\add_income.html:34 .\templates\income\income_edit.html:42
+msgid "Date of Income"
+msgstr "Daromad sanasi"
+
+#: .\templates\income\income_edit.html:11
+msgid "Edit Income"
+msgstr "Daromadni taxrirlash"
+
+#: .\templates\income\income_edit.html:16
+msgid "Delete"
+msgstr "O'chirich"
+
+#: .\templates\income\index.html:13
+msgid "My Income"
+msgstr "Mening daromdlarim"
+
+#: .\templates\income\index.html:38 .\templates\income\index.html:73
+msgid "Source"
+msgstr "Kurs"
+
+#: .\templates\partials\_sidebar.html:16
+msgid "Dashboard"
+msgstr "Boshqaruv Paneli"
+
+#: .\templates\partials\_sidebar.html:49
+msgid "Income Summary"
+msgstr "Daromadlar xisoboti"
+
+#: .\templates\partials\_sidebar.html:61
+msgid "Settings"
+msgstr "Sozlamalar"
+
+#: .\templates\partials\_sidebar.html:67
+msgid "Sign out"
+msgstr "Tizimdan chiqish"
+
+#: .\templates\partials\_sidebar.html:81
+msgid "General"
+msgstr "Umumiy"
+
+#: .\templates\partials\_sidebar.html:87
+msgid "Account"
+msgstr "Xisob"
+
+#: .\templates\preferences\index.html:7
+msgid "Preferred Currency"
+msgstr "Tanlangan Valyuta"
