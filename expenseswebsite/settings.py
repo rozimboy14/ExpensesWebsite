@@ -31,7 +31,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["ruzimboy.wuaze.com","www.ruzimboy.wuaze.com",'127.0.0.1']
+ALLOWED_HOSTS = ["expenses.uz","www.expenses.uz",'127.0.0.1']
 
 
 # Application definition
@@ -153,10 +153,10 @@ LOCALE_PATHS = [BASE_DIR / 'locale']
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "/static/"
-STATICFILES_DIRS = ('home/if0_38544035/ruzimboy.wuaze.com/django/staticfiles',)
+STATICFILES_DIRS = ('home/expenses.uz/django/static',)
 
-STATIC_ROOT = 'home/if0_38544035/ruzimboy.wuaze.com/django/staticfiles'
-MEDIA_ROOT='home/if0_38544035/ruzimboy.wuaze.com/django/media'
+STATIC_ROOT = 'home/expenses.uz/django/staticfiles'
+MEDIA_ROOT='home/expenses.uz/django/media'
 django_heroku.settings(locals())
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
