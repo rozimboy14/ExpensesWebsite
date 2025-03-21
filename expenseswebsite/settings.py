@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ["expenses.uz","www.expenses.uz",'127.0.0.1']
 
@@ -90,24 +90,13 @@ WSGI_APPLICATION = "expenseswebsite.wsgi.application"
 import psycopg2
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "incomeexpensesdb",
-        "USER": "postgres",
-        "PASSWORD": "ojimro011",
-        "HOST": "localhost",
-        "PORT": "5432",
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
     }
 }
-connection = psycopg2.connect(
-    dbname=DATABASES["default"]["NAME"],
-    user=DATABASES["default"]["USER"],
-    password=DATABASES["default"]["PASSWORD"],
-    host=DATABASES["default"]["HOST"],
-    port=DATABASES["default"]["PORT"],
-)
 
-print("PostgreSQL ga muvaffaqiyatli ulandi!")
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -143,7 +132,7 @@ from django.utils.translation import gettext_lazy as _
 LANGUAGES = [
     ('uz',_("Uzbek")),
     ('en',_("English")),
-    ('ru',_("Russian")),
+
 ]
 MODELTRANSLATION_DEFAULT_LANGUAGE = "en"
 
